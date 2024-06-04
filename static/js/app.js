@@ -67,7 +67,8 @@ function buildCharts(sample) {
 
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
-    // For the Bar Chart, map the otu_ids to a list of strings for your yticks
+    // For the Bar Chart, map the otu_ids to a list of strings for your yticks:
+    // Take a slice of the top ten otu_ids present in the sample.
     const yticks = otu_ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
 
     // Build a Bar Chart
@@ -127,4 +128,3 @@ function optionChanged(newSample) {
 
 // Initialise the dashboard
 init();
-
