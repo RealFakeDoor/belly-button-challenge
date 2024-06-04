@@ -60,7 +60,9 @@ function buildCharts(sample) {
       title: 'Bacteria Cultures Per Sample',
       showlegend: false,
       height: 600,
-      width: 1200
+      width: 1200,
+      xaxis: { title: 'OTU ID' },
+      yaxis: { title: 'Number of Bacteria' }
     };
 
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
